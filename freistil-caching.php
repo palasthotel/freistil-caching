@@ -32,6 +32,7 @@ function setEnforceCacheCookie() {
 function unsetEnforceCacheCookie() {
 	if(!headers_sent()){
 		setcookie( ENFORCE_CACHE_COOKIE_NAME, "", time() - 3600 );
+		setcookie( ENFORCE_CACHE_COOKIE_NAME, "", time() - 3600, COOKIEPATH, COOKIE_DOMAIN );
 	}
 }
 
